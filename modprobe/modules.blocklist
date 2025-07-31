@@ -1,0 +1,8 @@
+# adsp remoteproc crashes, and then hangs the device
+blocklist qcom_pd_mapper.ko
+
+# crashes the device
+blocklist qcom_q6v5_pas.ko
+
+# This requires /vendor/firmware_mnt to be mounted first, however ueventd loads this earlier than this
+blocklist venus-core.ko
