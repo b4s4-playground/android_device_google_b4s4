@@ -1,0 +1,55 @@
+# First to load
+reset-qcom-pdc
+
+# Media
+venus-core
+venus-dec
+venus-enc
+
+# Net
+qrtr-smd
+
+# automatically loaded by ueventd
+ath
+ath10k_core
+ath10k_snoc
+bluetooth
+btqca
+cfg80211
+ecc
+ecdh_generic
+hci_uart
+ipa
+libarc4
+mac80211
+mc
+nci
+nfc
+nxp_nci
+nxp_nci_i2c
+pwrseq_core
+qcom_common
+qcom_glink_smem
+qcom_pil_info
+qcom_q6v5
+qcom_q6v5_mss
+qcom_sysmon
+qmi_helpers
+qrtr
+qrtr_smd
+reset_qcom_pdc
+rfkill
+snd_compress
+snd_pcm_dmaengine
+snd_soc_core
+socinfo
+v4l2_async
+v4l2_fwnode
+v4l2_mem2mem
+videobuf2_common
+videobuf2_dma_sg
+videobuf2_memops
+videobuf2_v4l2
+videodev
+
+
