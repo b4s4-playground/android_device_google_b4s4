@@ -1,0 +1,22 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "init.b4s4.rc",
+    src: "init.b4s4.rc",
+    vendor: true,
+    sub_dir: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.recovery.b4s4.rc",
+    src: "init.recovery.b4s4.rc",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.b4s4.rc",
+    src: "ueventd.b4s4.rc",
+    vendor: true,
+}

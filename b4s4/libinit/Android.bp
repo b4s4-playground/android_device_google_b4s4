@@ -1,0 +1,11 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+cc_library_static {
+    name: "init_google_b4s4",
+    srcs: ["init_google_b4s4.cpp"],
+    whole_static_libs: ["libinit_mainline_common"],
+    include_dirs: ["system/core/init"],
+    recovery_available: true,
+}

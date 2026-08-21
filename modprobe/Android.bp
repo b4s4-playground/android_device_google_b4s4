@@ -1,0 +1,16 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "modules.load.normal",
+    src: "modules.load.normal",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "modules.blocklist",
+    src: "modules.blocklist",
+    vendor: true,
+    sub_dir: "lib/modules",
+}

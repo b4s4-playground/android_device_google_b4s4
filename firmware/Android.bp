@@ -1,0 +1,72 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+install_symlink {
+    name: "symlink_firmware_b4s4_venus.mbn",
+    vendor: true,
+    installed_location: "firmware/qcom/sdm670/venus.mbn",
+    symlink_target: "/vendor/firmware_mnt/image/venus.mdt",
+}
+
+install_symlink {
+    name: "symlink_firmware_b4s4_venus.b00",
+    vendor: true,
+    installed_location: "firmware/qcom/sdm670/venus.b00",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b00",
+}
+
+install_symlink {
+    name: "symlink_firmware_b4s4_venus.b01",
+    vendor: true,
+    installed_location: "firmware/qcom/sdm670/venus.b01",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b01",
+}
+
+install_symlink {
+    name: "symlink_firmware_b4s4_venus.b02",
+    vendor: true,
+    installed_location: "firmware/qcom/sdm670/venus.b02",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b02",
+}
+
+install_symlink {
+    name: "symlink_firmware_b4s4_venus.b03",
+    vendor: true,
+    installed_location: "firmware/qcom/sdm670/venus.b03",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b03",
+}
+
+install_symlink {
+    name: "symlink_firmware_b4s4_venus.b04",
+    vendor: true,
+    installed_location: "firmware/qcom/sdm670/venus.b04",
+    symlink_target: "/vendor/firmware_mnt/image/venus.b04",
+}
+
+genrule {
+    name: "gen_firmware_b4s4_ipa_fws.mbn",
+    tools: ["pil-squasher"],
+    out: ["ipa_fws.mbn"],
+    cmd: "$(location pil-squasher) $(out) ../../../../../vendor/google/b4s4/proprietary/vendor/firmware/ipa_fws.mdt",
+}
+
+prebuilt_firmware {
+    name: "firmware_b4s4_ipa_fws.mbn",
+    src: ":gen_firmware_b4s4_ipa_fws.mbn",
+    filename_from_src: true,
+    vendor: true,
+    sub_dir: "qcom/sdm670",
+}
+
+phony {
+    name: "all_symlink_firmware_b4s4",
+    required: [
+        "symlink_firmware_b4s4_venus.b00",
+        "symlink_firmware_b4s4_venus.b01",
+        "symlink_firmware_b4s4_venus.b02",
+        "symlink_firmware_b4s4_venus.b03",
+        "symlink_firmware_b4s4_venus.b04",
+        "symlink_firmware_b4s4_venus.mbn",
+    ],
+}

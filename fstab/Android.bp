@@ -1,0 +1,16 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "fstab.b4s4",
+    src: "fstab.b4s4",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.b4s4.ramdisk",
+    src: "fstab.b4s4",
+    filename: "fstab.b4s4",
+    ramdisk: true,
+}

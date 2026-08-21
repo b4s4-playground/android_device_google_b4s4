@@ -1,0 +1,22 @@
+[
+  {
+    "repository": "android_device_mainline_qcom-common",
+    "target_path": "device/mainline/qcom-common"
+  },
+  {
+    "repository": "android_device_mainline_common",
+    "target_path": "device/mainline/common"
+  },
+  {
+    "repository": "android_hardware_mainline_qcom",
+    "target_path": "hardware/mainline/qcom"
+  },
+  {
+    "repository": "android_external_tinyhal",
+    "target_path": "external/tinyhal"
+  },
+  {
+    "repository": "android_hardware_sony_timekeep",
+    "target_path": "hardware/sony/timekeep"
+  }
+]

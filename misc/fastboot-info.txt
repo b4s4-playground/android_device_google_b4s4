@@ -1,0 +1,8 @@
+flash dtbo
+flash boot
+flash vbmeta
+reboot fastboot
+flash system
+flash vendor
+flash product
+flash system_ext
