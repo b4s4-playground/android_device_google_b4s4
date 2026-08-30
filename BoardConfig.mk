@@ -65,6 +65,10 @@ BOARD_KERNEL_CMDLINE += \
     panic=0 \
     printk.always_kmsg_dump=1
 
+BOARD_KERNEL_CMDLINE += \
+    androidboot.selinux=permissive \
+    audit=0
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
