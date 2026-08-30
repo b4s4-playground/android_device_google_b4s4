@@ -1,0 +1,10 @@
+//
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "cgroups.b4s4",
+    src: "cgroups.json",
+    filename: "cgroups.json",
+    vendor: true,
+}
