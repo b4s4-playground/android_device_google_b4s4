@@ -32,11 +32,20 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += fastbootd
 
 PRODUCT_PACKAGES += \
+    cgroups.b4s4
+
+PRODUCT_PACKAGES += \
     fstab.b4s4 \
     fstab.b4s4.ramdisk \
     init.b4s4.rc \
+    init.sargo.rc \
+    init.bonito.rc \
     init.recovery.b4s4.rc \
+    init.recovery.sargo.rc \
+    init.recovery.bonito.rc \
     ueventd.b4s4.rc \
+    ueventd.sargo.rc \
+    ueventd.bonito.rc \
     modules.blocklist \
     modules.load.normal
 
@@ -51,8 +60,9 @@ PRODUCT_PACKAGES += \
     all_symlink_firmware_b4s4 \
     firmware_b4s4_ipa_fws.mbn
 
+# GPU zap shader
 PRODUCT_COPY_FILES += \
-    vendor/google/b4s4/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sdm670/a615_zap.mbn
+    vendor/google/b4s4/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sdm670/sargo/a615_zap.mbn
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlays/overlay

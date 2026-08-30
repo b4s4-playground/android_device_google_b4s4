@@ -20,3 +20,41 @@ prebuilt_etc {
     src: "ueventd.b4s4.rc",
     vendor: true,
 }
+
+prebuilt_etc {
+    name: "init.sargo.rc",
+    src: "init.sargo.rc",
+    vendor: true,
+    sub_dir: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.bonito.rc",
+    src: "init.bonito.rc",
+    vendor: true,
+    sub_dir: "init/hw",
+}
+
+prebuilt_etc {
+    name: "init.recovery.sargo.rc",
+    src: "init.recovery.sargo.rc",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "init.recovery.bonito.rc",
+    src: "init.recovery.bonito.rc",
+    recovery: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.sargo.rc",
+    src: "ueventd.sargo.rc",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "ueventd.bonito.rc",
+    src: "ueventd.bonito.rc",
+    vendor: true,
+}
