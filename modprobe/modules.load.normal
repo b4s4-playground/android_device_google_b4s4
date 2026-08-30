@@ -1,6 +1,10 @@
 # First to load
 reset-qcom-pdc
 
+# DMA-BUF heaps
+cma_heap
+system_heap
+
 # Media
 venus-core
 venus-dec
