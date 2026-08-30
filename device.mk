@@ -31,9 +31,7 @@ PRODUCT_PACKAGES += \
 # fastbootd
 PRODUCT_PACKAGES += fastbootd
 
-PRODUCT_PACKAGES += \
-    cgroups.b4s4
-
+# RCs
 PRODUCT_PACKAGES += \
     fstab.b4s4 \
     fstab.b4s4.ramdisk \
@@ -57,6 +55,11 @@ PRODUCT_PACKAGES += \
 # GPU zap shader
 PRODUCT_COPY_FILES += \
     vendor/google/b4s4/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sdm670/a615_zap.mbn
+
+# Cgroups
+PRODUCT_COPY_FILES += \
+    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
+    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlays/overlay
