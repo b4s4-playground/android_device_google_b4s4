@@ -49,15 +49,9 @@ PRODUCT_PACKAGES += \
     modules.blocklist \
     modules.load.normal
 
-# temp patch
-PRODUCT_PACKAGES_REMOVE := \
-    webview \
-    DevicePersonalizationPrebuiltPixel3 \
-    AmbientSensePrebuilt
-
 # Firmware
 PRODUCT_PACKAGES += \
-    all_symlink_firmware_b4s4 \
+    firmware_b4s4_bundle \
     firmware_b4s4_ipa_fws.mbn
 
 # GPU zap shader
@@ -70,3 +64,4 @@ DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlays/overlay
 PRODUCT_OTA_ENFORCE_VINTF_KERNEL_REQUIREMENTS := false
 
 PRODUCT_SOONG_NAMESPACES += $(COMMON_PATH)
+PRODUCT_SOONG_NAMESPACES += vendor/google/b4s4
