@@ -62,7 +62,7 @@ PRODUCT_PACKAGES += \
 
 # GPU zap shader
 PRODUCT_COPY_FILES += \
-    vendor/google/b4s4/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sdm670/sargo/a615_zap.mbn
+    vendor/google/b4s4/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sdm670/a615_zap.mbn
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlays/overlay
