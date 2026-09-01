@@ -51,8 +51,26 @@ PRODUCT_COPY_FILES += \
 
 # Firmware
 PRODUCT_PACKAGES += \
+    firmware_ath10k_WCN3990_hw1.0_board-2.bin \
+    firmware_ath10k_WCN3990_hw1.0_firmware-5.bin \
     firmware_b4s4_bundle \
     firmware_b4s4_ipa_fws.mbn
+
+# Modem
+PRODUCT_PACKAGES += \
+    pd-mapper \
+    pd-mapper.rc \
+    rmtfs \
+    rmtfs.rc \
+    tqftpserv \
+    tqftpserv.rc
+
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.qcom.soc.enable_modem_services=1
+
+# QRTR
+PRODUCT_PACKAGES += \
+    qrtr-cfg
 
 # GPU zap shader
 PRODUCT_COPY_FILES += \
