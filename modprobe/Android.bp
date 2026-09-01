@@ -7,10 +7,3 @@ prebuilt_etc {
     src: "modules.load.normal",
     vendor: true,
 }
-
-prebuilt_etc {
-    name: "modules.blocklist",
-    src: "modules.blocklist",
-    vendor: true,
-    sub_dir: "lib/modules",
-}

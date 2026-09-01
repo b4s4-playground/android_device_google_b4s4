@@ -15,10 +15,9 @@ include device/mainline/qcom-common/optional/options.mk
 $(call inherit-product, device/mainline/qcom-common/mainline_qcom-common.mk)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
-PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 28
+PRODUCT_SHIPPING_API_LEVEL := 33
 
 # A/B
 PRODUCT_PACKAGES += \
@@ -44,8 +43,11 @@ PRODUCT_PACKAGES += \
     ueventd.b4s4.rc \
     ueventd.sargo.rc \
     ueventd.bonito.rc \
-    modules.blocklist \
     modules.load.normal
+
+# Kernel module blocklist
+PRODUCT_COPY_FILES += \
+    $(COMMON_PATH)/modprobe/modules.blocklist:$(TARGET_COPY_OUT_VENDOR)/lib/modules/modules.blocklist
 
 # Firmware
 PRODUCT_PACKAGES += \
@@ -55,11 +57,6 @@ PRODUCT_PACKAGES += \
 # GPU zap shader
 PRODUCT_COPY_FILES += \
     vendor/google/b4s4/proprietary/vendor/firmware/a615_zap.elf:$(TARGET_COPY_OUT_VENDOR)/firmware/qcom/sdm670/a615_zap.mbn
-
-# Cgroups
-PRODUCT_COPY_FILES += \
-    system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
-    system/core/libprocessgroup/profiles/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlays/overlay
