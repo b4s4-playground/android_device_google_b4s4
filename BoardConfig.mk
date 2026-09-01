@@ -62,10 +62,6 @@ BOARD_KERNEL_CMDLINE := \
     console=tty0
 
 BOARD_KERNEL_CMDLINE += \
-    panic=0 \
-    printk.always_kmsg_dump=1
-
-BOARD_KERNEL_CMDLINE += \
     androidboot.selinux=permissive \
     audit=0
 
